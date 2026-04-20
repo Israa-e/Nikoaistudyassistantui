@@ -69,7 +69,7 @@ export default function AIChatScreen() {
       {/* Header */}
       <div className="px-6 pt-8 pb-4 border-b border-white/10 bg-[#0F0F14]">
         <div className="flex items-center gap-3">
-          <div className="w-12 h-12 bg-gradient-to-br from-[#5F33E1] to-[#8B5CF6] rounded-2xl flex items-center justify-center">
+          <div className="w-12 h-12 bg-gradient-to-br from-[#6B5FFF] to-[#A855F7] rounded-2xl flex items-center justify-center">
             <Sparkles className="w-6 h-6 text-white" />
           </div>
           <div>
@@ -93,7 +93,7 @@ export default function AIChatScreen() {
             <div
               className={`w-10 h-10 rounded-2xl flex items-center justify-center flex-shrink-0 ${
                 message.role === "ai"
-                  ? "bg-gradient-to-br from-[#5F33E1] to-[#8B5CF6]"
+                  ? "bg-gradient-to-br from-[#6B5FFF] to-[#A855F7]"
                   : "bg-[#232334]"
               }`}
             >
@@ -109,7 +109,7 @@ export default function AIChatScreen() {
               className={`max-w-[75%] rounded-3xl px-5 py-4 ${
                 message.role === "ai"
                   ? "bg-[#1A1A22]/50 backdrop-blur-xl border border-white/10"
-                  : "bg-[#5F33E1]"
+                  : "bg-[#6B5FFF]"
               }`}
             >
               <p className="text-white text-sm leading-relaxed">{message.content}</p>
@@ -151,7 +151,7 @@ export default function AIChatScreen() {
               onChange={(e) => setInputValue(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && handleSend()}
               placeholder="Ask me anything..."
-              className="w-full bg-[#1A1A22]/50 backdrop-blur-xl border border-white/10 rounded-2xl px-5 py-4 pr-12 text-white placeholder:text-[#B8B8C7]/50 focus:outline-none focus:ring-2 focus:ring-[#5F33E1] transition-all"
+              className="w-full bg-[#1A1A22]/50 backdrop-blur-xl border border-white/10 rounded-2xl px-5 py-4 pr-12 text-white placeholder:text-[#B8B8C7]/50 focus:outline-none focus:ring-2 focus:ring-[#6B5FFF] transition-all"
             />
             <button className="absolute right-3 top-1/2 -translate-y-1/2 p-2 text-[#B8B8C7] hover:text-white transition-colors">
               <Mic className="w-5 h-5" />
@@ -159,7 +159,7 @@ export default function AIChatScreen() {
           </div>
           <button
             onClick={handleSend}
-            className="bg-[#5F33E1] hover:bg-[#7047E8] p-4 rounded-2xl transition-all shadow-lg shadow-[#5F33E1]/30"
+            className="bg-[#6B5FFF] hover:bg-[#8B75FF] p-4 rounded-2xl transition-all shadow-lg shadow-[#6B5FFF]/30"
           >
             <Send className="w-5 h-5 text-white" />
           </button>

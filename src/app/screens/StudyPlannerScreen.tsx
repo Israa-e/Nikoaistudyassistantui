@@ -75,7 +75,7 @@ export default function StudyPlannerScreen() {
       case "review":
         return { bg: "bg-blue-500/20", border: "border-blue-500/30", text: "text-blue-400" };
       default:
-        return { bg: "bg-[#5F33E1]/20", border: "border-[#5F33E1]/30", text: "text-[#5F33E1]" };
+        return { bg: "bg-[#6B5FFF]/20", border: "border-[#6B5FFF]/30", text: "text-[#6B5FFF]" };
     }
   };
 
@@ -95,7 +95,7 @@ export default function StudyPlannerScreen() {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="bg-gradient-to-br from-[#5F33E1] to-[#8B5CF6] rounded-3xl p-5 mb-6 shadow-lg shadow-[#5F33E1]/20"
+        className="bg-gradient-to-br from-[#6B5FFF] to-[#A855F7] rounded-3xl p-5 mb-6 shadow-lg shadow-[#6B5FFF]/20"
       >
         <div className="flex items-start gap-3">
           <div className="bg-white/20 backdrop-blur-sm p-2 rounded-xl">
@@ -144,7 +144,7 @@ export default function StudyPlannerScreen() {
                 fill="transparent"
                 strokeDasharray={`${2 * Math.PI * 28}`}
                 strokeDashoffset={`${2 * Math.PI * 28 * (1 - progressPercent / 100)}`}
-                className="text-[#5F33E1]"
+                className="text-[#6B5FFF]"
                 strokeLinecap="round"
               />
             </svg>
@@ -157,7 +157,7 @@ export default function StudyPlannerScreen() {
           <motion.div
             initial={{ width: 0 }}
             animate={{ width: `${progressPercent}%` }}
-            className="h-full bg-gradient-to-r from-[#5F33E1] to-[#8B5CF6] rounded-full"
+            className="h-full bg-gradient-to-r from-[#6B5FFF] to-[#A855F7] rounded-full"
             transition={{ delay: 0.3, duration: 0.8 }}
           />
         </div>
@@ -189,7 +189,7 @@ export default function StudyPlannerScreen() {
               onClick={() => setSelectedDay(index)}
               className={`relative flex flex-col items-center p-3 rounded-2xl transition-all ${
                 index === selectedDay
-                  ? "bg-[#5F33E1] shadow-lg shadow-[#5F33E1]/30"
+                  ? "bg-[#6B5FFF] shadow-lg shadow-[#6B5FFF]/30"
                   : "bg-[#1A1A22]/50 border border-white/10 hover:bg-[#232334]"
               }`}
             >
@@ -264,7 +264,7 @@ export default function StudyPlannerScreen() {
                 </div>
 
                 {!task.completed && (
-                  <button className="w-full mt-3 bg-[#5F33E1]/10 hover:bg-[#5F33E1]/20 border border-[#5F33E1]/30 text-[#5F33E1] py-2 rounded-xl text-sm font-medium transition-all">
+                  <button className="w-full mt-3 bg-[#6B5FFF]/10 hover:bg-[#6B5FFF]/20 border border-[#6B5FFF]/30 text-[#6B5FFF] py-2 rounded-xl text-sm font-medium transition-all">
                     Start Study Session
                   </button>
                 )}

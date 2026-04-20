@@ -93,7 +93,7 @@ export default function FlashcardsScreen() {
           </span>
           <button
             onClick={resetCards}
-            className="text-[#5F33E1] hover:text-[#7047E8] transition-colors flex items-center gap-2 text-sm"
+            className="text-[#6B5FFF] hover:text-[#8B75FF] transition-colors flex items-center gap-2 text-sm"
           >
             <RotateCw className="w-4 h-4" />
             Reset
@@ -102,7 +102,7 @@ export default function FlashcardsScreen() {
         <div className="w-full bg-[#232334] rounded-full h-2 overflow-hidden">
           <motion.div
             animate={{ width: `${((currentCard + 1) / flashcards.length) * 100}%` }}
-            className="h-full bg-gradient-to-r from-[#5F33E1] to-[#8B5CF6] rounded-full"
+            className="h-full bg-gradient-to-r from-[#6B5FFF] to-[#A855F7] rounded-full"
             transition={{ duration: 0.3 }}
           />
         </div>
@@ -134,7 +134,7 @@ export default function FlashcardsScreen() {
                   >
                     {/* Front */}
                     <div
-                      className="absolute inset-0 bg-gradient-to-br from-[#5F33E1] to-[#8B5CF6] rounded-3xl p-8 flex flex-col items-center justify-center shadow-2xl shadow-[#5F33E1]/30"
+                      className="absolute inset-0 bg-gradient-to-br from-[#6B5FFF] to-[#A855F7] rounded-3xl p-8 flex flex-col items-center justify-center shadow-2xl shadow-[#6B5FFF]/30"
                       style={{
                         backfaceVisibility: "hidden",
                         WebkitBackfaceVisibility: "hidden",
@@ -156,8 +156,8 @@ export default function FlashcardsScreen() {
                         transform: "rotateY(180deg)",
                       }}
                     >
-                      <div className="w-12 h-12 bg-[#5F33E1]/20 rounded-2xl flex items-center justify-center mb-6">
-                        <Check className="w-6 h-6 text-[#5F33E1]" />
+                      <div className="w-12 h-12 bg-[#6B5FFF]/20 rounded-2xl flex items-center justify-center mb-6">
+                        <Check className="w-6 h-6 text-[#6B5FFF]" />
                       </div>
                       <p className="text-white text-lg text-center leading-relaxed">
                         {flashcards[currentCard].answer}
@@ -190,7 +190,7 @@ export default function FlashcardsScreen() {
                   key={index}
                   className={`w-2 h-2 rounded-full transition-all ${
                     index === currentCard
-                      ? "bg-[#5F33E1] w-6"
+                      ? "bg-[#6B5FFF] w-6"
                       : knownCards.includes(index)
                       ? "bg-green-500"
                       : unknownCards.includes(index)
@@ -245,7 +245,7 @@ export default function FlashcardsScreen() {
           animate={{ opacity: 1, scale: 1 }}
           className="flex-1 flex flex-col items-center justify-center"
         >
-          <div className="bg-gradient-to-br from-[#5F33E1] to-[#8B5CF6] rounded-3xl p-8 mb-6 text-center shadow-2xl shadow-[#5F33E1]/30 w-full">
+          <div className="bg-gradient-to-br from-[#6B5FFF] to-[#A855F7] rounded-3xl p-8 mb-6 text-center shadow-2xl shadow-[#6B5FFF]/30 w-full">
             <motion.div
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
@@ -276,7 +276,7 @@ export default function FlashcardsScreen() {
             >
               Study Again
             </button>
-            <button className="bg-[#5F33E1] hover:bg-[#7047E8] text-white py-4 rounded-2xl font-semibold transition-all shadow-lg shadow-[#5F33E1]/30">
+            <button className="bg-[#6B5FFF] hover:bg-[#8B75FF] text-white py-4 rounded-2xl font-semibold transition-all shadow-lg shadow-[#6B5FFF]/30">
               Continue
             </button>
           </div>

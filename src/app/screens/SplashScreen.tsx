@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router";
 import { motion } from "motion/react";
+import { NikoLogo } from "../components/NikoLogo";
 
 export default function SplashScreen() {
   const navigate = useNavigate();
@@ -20,32 +21,38 @@ export default function SplashScreen() {
         transition={{ duration: 0.5 }}
         className="flex flex-col items-center gap-8"
       >
-        {/* Logo with sound wave */}
+        {/* Neural Network Logo */}
         <div className="relative">
           <motion.div
-            className="w-32 h-32 rounded-[32px] bg-gradient-to-br from-[#5F33E1] to-[#8B5CF6] flex items-center justify-center shadow-2xl shadow-[#5F33E1]/30"
-            animate={{ 
+            className="w-40 h-40 rounded-[32px] bg-[#1A1A22]/50 backdrop-blur-sm border border-[#232334] flex items-center justify-center shadow-2xl shadow-[#6B5FFF]/30"
+            animate={{
               boxShadow: [
-                "0 20px 60px rgba(95, 51, 225, 0.3)",
-                "0 20px 80px rgba(95, 51, 225, 0.5)",
-                "0 20px 60px rgba(95, 51, 225, 0.3)",
+                "0 20px 60px rgba(107, 95, 255, 0.3)",
+                "0 20px 80px rgba(107, 95, 255, 0.5)",
+                "0 20px 60px rgba(107, 95, 255, 0.3)",
               ]
             }}
             transition={{ duration: 2, repeat: Infinity }}
           >
-            <span className="text-6xl font-bold text-white">N</span>
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <NikoLogo size={100} />
+            </motion.div>
           </motion.div>
-          
-          {/* Sound wave animation */}
+
+          {/* AI pulse animation */}
           <div className="absolute -right-12 top-1/2 -translate-y-1/2 flex items-center gap-1">
             {[0, 1, 2].map((i) => (
               <motion.div
                 key={i}
-                className="w-1 bg-[#5F33E1] rounded-full"
-                animate={{ 
+                className="w-1 bg-gradient-to-b from-[#6B5FFF] to-[#FF4D9F] rounded-full"
+                animate={{
                   height: [12, 24, 12],
                 }}
-                transition={{ 
+                transition={{
                   duration: 0.8,
                   repeat: Infinity,
                   delay: i * 0.2,
@@ -76,7 +83,7 @@ export default function SplashScreen() {
           {[0, 1, 2].map((i) => (
             <motion.div
               key={i}
-              className="w-2 h-2 bg-[#5F33E1] rounded-full"
+              className="w-2 h-2 bg-[#6B5FFF] rounded-full"
               animate={{ 
                 scale: [1, 1.5, 1],
                 opacity: [0.5, 1, 0.5],

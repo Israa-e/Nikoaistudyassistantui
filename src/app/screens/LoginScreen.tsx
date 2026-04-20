@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router";
 import { motion } from "motion/react";
 import { Mail, Lock, Chrome } from "lucide-react";
+import { NikoLogo } from "../components/NikoLogo";
 
 export default function LoginScreen() {
   const [isLogin, setIsLogin] = useState(true);
@@ -23,8 +24,8 @@ export default function LoginScreen() {
       >
         {/* Logo */}
         <div className="flex flex-col items-center mb-12">
-          <div className="w-20 h-20 rounded-[24px] bg-gradient-to-br from-[#5F33E1] to-[#8B5CF6] flex items-center justify-center mb-4 shadow-lg shadow-[#5F33E1]/30">
-            <span className="text-4xl font-bold text-white">N</span>
+          <div className="w-24 h-24 rounded-[24px] bg-[#1A1A22]/50 backdrop-blur-sm border border-[#232334] flex items-center justify-center mb-4 shadow-lg shadow-[#6B5FFF]/30">
+            <NikoLogo size={70} />
           </div>
           <h1 className="text-3xl font-bold text-white">Welcome to Niko</h1>
           <p className="text-[#B8B8C7] mt-2">
@@ -45,7 +46,7 @@ export default function LoginScreen() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="your.email@example.com"
-                  className="w-full bg-[#232334] border border-white/10 rounded-2xl pl-12 pr-4 py-4 text-white placeholder:text-[#B8B8C7]/50 focus:outline-none focus:ring-2 focus:ring-[#5F33E1] transition-all"
+                  className="w-full bg-[#232334] border border-white/10 rounded-2xl pl-12 pr-4 py-4 text-white placeholder:text-[#B8B8C7]/50 focus:outline-none focus:ring-2 focus:ring-[#6B5FFF] transition-all"
                 />
               </div>
             </div>
@@ -60,7 +61,7 @@ export default function LoginScreen() {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="••••••••"
-                  className="w-full bg-[#232334] border border-white/10 rounded-2xl pl-12 pr-4 py-4 text-white placeholder:text-[#B8B8C7]/50 focus:outline-none focus:ring-2 focus:ring-[#5F33E1] transition-all"
+                  className="w-full bg-[#232334] border border-white/10 rounded-2xl pl-12 pr-4 py-4 text-white placeholder:text-[#B8B8C7]/50 focus:outline-none focus:ring-2 focus:ring-[#6B5FFF] transition-all"
                 />
               </div>
             </div>
@@ -69,7 +70,7 @@ export default function LoginScreen() {
               <div className="flex justify-end">
                 <button
                   type="button"
-                  className="text-sm text-[#5F33E1] hover:text-[#7047E8] transition-colors"
+                  className="text-sm text-[#6B5FFF] hover:text-[#8B75FF] transition-colors"
                 >
                   Forgot password?
                 </button>
@@ -79,7 +80,7 @@ export default function LoginScreen() {
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-full bg-[#5F33E1] hover:bg-[#7047E8] text-white py-4 rounded-2xl font-semibold transition-all shadow-lg shadow-[#5F33E1]/30 hover:shadow-[#5F33E1]/50 mt-6"
+              className="w-full bg-[#6B5FFF] hover:bg-[#8B75FF] text-white py-4 rounded-2xl font-semibold transition-all shadow-lg shadow-[#6B5FFF]/30 hover:shadow-[#6B5FFF]/50 mt-6"
             >
               {isLogin ? "Sign In" : "Create Account"}
             </button>
@@ -116,12 +117,12 @@ export default function LoginScreen() {
             {isLogin ? (
               <>
                 Don't have an account?{" "}
-                <span className="text-[#5F33E1] font-semibold">Sign Up</span>
+                <span className="text-[#6B5FFF] font-semibold">Sign Up</span>
               </>
             ) : (
               <>
                 Already have an account?{" "}
-                <span className="text-[#5F33E1] font-semibold">Sign In</span>
+                <span className="text-[#6B5FFF] font-semibold">Sign In</span>
               </>
             )}
           </button>

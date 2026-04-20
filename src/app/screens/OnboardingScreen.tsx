@@ -8,19 +8,19 @@ const slides = [
     icon: Bot,
     title: "Your AI Study Companion",
     description: "Chat with an intelligent AI tutor that understands your learning materials and answers questions 24/7.",
-    gradient: "from-[#5F33E1] to-[#8B5CF6]",
+    gradient: "from-[#6B5FFF] to-[#A855F7]",
   },
   {
     icon: FileText,
     title: "Smart PDF Analysis",
     description: "Upload lecture notes and PDFs. Get instant summaries, key points, and personalized study guides.",
-    gradient: "from-[#8B5CF6] to-[#A78BFA]",
+    gradient: "from-[#A855F7] to-[#D946EF]",
   },
   {
     icon: Brain,
     title: "Quizzes & Flashcards",
     description: "Generate custom quizzes and flashcards from your materials. Track progress and improve retention.",
-    gradient: "from-[#A78BFA] to-[#C4B5FD]",
+    gradient: "from-[#D946EF] to-[#FF7AB7]",
   },
 ];
 
@@ -65,7 +65,7 @@ export default function OnboardingScreen() {
           >
             {/* Icon */}
             <motion.div
-              className={`w-32 h-32 rounded-[32px] bg-gradient-to-br ${slides[currentSlide].gradient} flex items-center justify-center mb-12 shadow-2xl shadow-[#5F33E1]/20`}
+              className={`w-32 h-32 rounded-[32px] bg-gradient-to-br ${slides[currentSlide].gradient} flex items-center justify-center mb-12 shadow-2xl shadow-[#6B5FFF]/20`}
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
@@ -79,7 +79,7 @@ export default function OnboardingScreen() {
             <h2 className="text-3xl font-bold text-white mb-4">
               {slides[currentSlide].title}
             </h2>
-            <p className="text-[#B8B8C7] text-lg leading-relaxed max-w-sm">
+            <p className="text-[#B8B8C7] leading-relaxed max-w-sm text-[16px]">
               {slides[currentSlide].description}
             </p>
           </motion.div>
@@ -95,7 +95,7 @@ export default function OnboardingScreen() {
               key={index}
               className={`h-2 rounded-full transition-all ${
                 index === currentSlide
-                  ? "w-8 bg-[#5F33E1]"
+                  ? "w-8 bg-[#6B5FFF]"
                   : "w-2 bg-[#232334]"
               }`}
             />
@@ -105,7 +105,7 @@ export default function OnboardingScreen() {
         {/* Next button */}
         <button
           onClick={nextSlide}
-          className="w-full bg-[#5F33E1] hover:bg-[#7047E8] text-white py-4 rounded-2xl font-semibold flex items-center justify-center gap-2 transition-all shadow-lg shadow-[#5F33E1]/30 hover:shadow-[#5F33E1]/50"
+          className="w-full bg-[#6B5FFF] hover:bg-[#8B75FF] text-white py-4 rounded-2xl font-semibold flex items-center justify-center gap-2 transition-all shadow-lg shadow-[#6B5FFF]/30 hover:shadow-[#6B5FFF]/50"
         >
           {currentSlide === slides.length - 1 ? "Get Started" : "Next"}
           <ChevronRight className="w-5 h-5" />

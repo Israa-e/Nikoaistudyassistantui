@@ -6,16 +6,16 @@ export default function HomeScreen() {
   const navigate = useNavigate();
 
   const subjects = [
-    { name: "Data Security", progress: 75, color: "#5F33E1", lessons: 12, completed: 9 },
-    { name: "Web Development", progress: 60, color: "#8B5CF6", lessons: 15, completed: 9 },
-    { name: "Algorithms", progress: 45, color: "#A78BFA", lessons: 20, completed: 9 },
+    { name: "Data Security", progress: 75, color: "#6B5FFF", lessons: 12, completed: 9 },
+    { name: "Web Development", progress: 60, color: "#A855F7", lessons: 15, completed: 9 },
+    { name: "Algorithms", progress: 45, color: "#FF4D9F", lessons: 20, completed: 9 },
   ];
 
   const quickActions = [
-    { icon: Upload, label: "Upload PDF", path: "/app/upload", gradient: "from-[#5F33E1] to-[#7047E8]" },
-    { icon: MessageSquare, label: "Ask AI", path: "/app/chat", gradient: "from-[#8B5CF6] to-[#9D6FF7]" },
-    { icon: Brain, label: "Take Quiz", path: "/app/quiz", gradient: "from-[#A78BFA] to-[#B794FB]" },
-    { icon: Layers, label: "Flashcards", path: "/app/flashcards", gradient: "from-[#C4B5FD] to-[#D4CBFE]" },
+    { icon: Upload, label: "Upload PDF", path: "/app/upload", gradient: "from-[#6B5FFF] to-[#8B75FF]" },
+    { icon: MessageSquare, label: "Ask AI", path: "/app/chat", gradient: "from-[#A855F7] to-[#C97DF8]" },
+    { icon: Brain, label: "Take Quiz", path: "/app/quiz", gradient: "from-[#D946EF] to-[#E96BF3]" },
+    { icon: Layers, label: "Flashcards", path: "/app/flashcards", gradient: "from-[#FF4D9F] to-[#FF7AB7]" },
   ];
 
   return (
@@ -35,7 +35,7 @@ export default function HomeScreen() {
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.1 }}
-        className="bg-gradient-to-br from-[#5F33E1] to-[#8B5CF6] rounded-3xl p-6 mb-6 shadow-2xl shadow-[#5F33E1]/20 relative overflow-hidden"
+        className="bg-gradient-to-br from-[#6B5FFF] to-[#A855F7] rounded-3xl p-6 mb-6 shadow-2xl shadow-[#6B5FFF]/20 relative overflow-hidden"
       >
         <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16"></div>
         <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full -ml-12 -mb-12"></div>

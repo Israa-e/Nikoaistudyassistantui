@@ -25,7 +25,7 @@ export default function ProfileScreen() {
         className="flex flex-col items-center mb-8"
       >
         <div className="relative mb-4">
-          <div className="w-24 h-24 bg-gradient-to-br from-[#5F33E1] to-[#8B5CF6] rounded-3xl flex items-center justify-center shadow-xl shadow-[#5F33E1]/30">
+          <div className="w-24 h-24 bg-gradient-to-br from-[#6B5FFF] to-[#A855F7] rounded-3xl flex items-center justify-center shadow-xl shadow-[#6B5FFF]/30">
             <User className="w-12 h-12 text-white" />
           </div>
           <div className="absolute -bottom-2 -right-2 bg-green-500 border-4 border-[#0F0F14] w-8 h-8 rounded-full flex items-center justify-center">
@@ -141,9 +141,9 @@ export default function ProfileScreen() {
         <h2 className="text-xl font-bold text-white mb-4">Learning Progress</h2>
         <div className="space-y-4">
           {[
-            { name: "Data Security", progress: 75, color: "#5F33E1" },
-            { name: "Web Development", progress: 60, color: "#8B5CF6" },
-            { name: "Algorithms", progress: 45, color: "#A78BFA" },
+            { name: "Data Security", progress: 75, color: "#6B5FFF" },
+            { name: "Web Development", progress: 60, color: "#A855F7" },
+            { name: "Algorithms", progress: 45, color: "#D946EF" },
           ].map((subject, index) => (
             <motion.div
               key={subject.name}

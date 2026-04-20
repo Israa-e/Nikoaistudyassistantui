@@ -43,7 +43,7 @@ export function MainLayout() {
                 }`}
               >
                 <div className={`p-2 rounded-xl transition-all ${
-                  active ? "bg-[#5F33E1]" : "bg-transparent"
+                  active ? "bg-[#6B5FFF]" : "bg-transparent"
                 }`}>
                   <Icon className="w-5 h-5" />
                 </div>

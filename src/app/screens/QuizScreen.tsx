@@ -110,7 +110,7 @@ export default function QuizScreen() {
                     onClick={() => setSelectedSubject(subject)}
                     className={`p-4 rounded-2xl border-2 transition-all ${
                       selectedSubject === subject
-                        ? "border-[#5F33E1] bg-[#5F33E1]/20"
+                        ? "border-[#6B5FFF] bg-[#6B5FFF]/20"
                         : "border-white/10 bg-[#1A1A22]/50"
                     }`}
                   >
@@ -130,7 +130,7 @@ export default function QuizScreen() {
                     onClick={() => setSelectedDifficulty(difficulty)}
                     className={`flex-1 p-4 rounded-2xl border-2 transition-all ${
                       selectedDifficulty === difficulty
-                        ? "border-[#5F33E1] bg-[#5F33E1]/20"
+                        ? "border-[#6B5FFF] bg-[#6B5FFF]/20"
                         : "border-white/10 bg-[#1A1A22]/50"
                     }`}
                   >
@@ -165,7 +165,7 @@ export default function QuizScreen() {
               disabled={!selectedSubject || !selectedDifficulty}
               className={`w-full py-4 rounded-2xl font-semibold transition-all flex items-center justify-center gap-2 ${
                 selectedSubject && selectedDifficulty
-                  ? "bg-[#5F33E1] hover:bg-[#7047E8] text-white shadow-lg shadow-[#5F33E1]/30"
+                  ? "bg-[#6B5FFF] hover:bg-[#8B75FF] text-white shadow-lg shadow-[#6B5FFF]/30"
                   : "bg-[#232334] text-[#B8B8C7] cursor-not-allowed"
               }`}
             >
@@ -187,7 +187,7 @@ export default function QuizScreen() {
             <div className="bg-[#1A1A22]/50 backdrop-blur-xl border border-white/10 rounded-3xl p-5 mb-6">
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center gap-2">
-                  <Brain className="w-5 h-5 text-[#5F33E1]" />
+                  <Brain className="w-5 h-5 text-[#6B5FFF]" />
                   <span className="text-white font-medium">
                     Question {currentQuestion + 1}/{quizQuestions.length}
                   </span>
@@ -205,7 +205,7 @@ export default function QuizScreen() {
                 <motion.div
                   initial={{ width: 0 }}
                   animate={{ width: `${((currentQuestion + 1) / quizQuestions.length) * 100}%` }}
-                  className="h-full bg-[#5F33E1] rounded-full"
+                  className="h-full bg-[#6B5FFF] rounded-full"
                   transition={{ duration: 0.3 }}
                 />
               </div>
@@ -226,7 +226,7 @@ export default function QuizScreen() {
                   onClick={() => handleAnswerSelect(index)}
                   className={`w-full p-5 rounded-2xl border-2 transition-all text-left ${
                     selectedAnswers[currentQuestion] === index
-                      ? "border-[#5F33E1] bg-[#5F33E1]/20"
+                      ? "border-[#6B5FFF] bg-[#6B5FFF]/20"
                       : "border-white/10 bg-[#232334] hover:border-white/20"
                   }`}
                 >
@@ -234,7 +234,7 @@ export default function QuizScreen() {
                     <div
                       className={`w-6 h-6 rounded-full border-2 flex items-center justify-center ${
                         selectedAnswers[currentQuestion] === index
-                          ? "border-[#5F33E1] bg-[#5F33E1]"
+                          ? "border-[#6B5FFF] bg-[#6B5FFF]"
                           : "border-white/30"
                       }`}
                     >
@@ -254,7 +254,7 @@ export default function QuizScreen() {
               disabled={selectedAnswers[currentQuestion] === undefined}
               className={`w-full py-4 rounded-2xl font-semibold transition-all flex items-center justify-center gap-2 ${
                 selectedAnswers[currentQuestion] !== undefined
-                  ? "bg-[#5F33E1] hover:bg-[#7047E8] text-white shadow-lg shadow-[#5F33E1]/30"
+                  ? "bg-[#6B5FFF] hover:bg-[#8B75FF] text-white shadow-lg shadow-[#6B5FFF]/30"
                   : "bg-[#232334] text-[#B8B8C7] cursor-not-allowed"
               }`}
             >
@@ -273,7 +273,7 @@ export default function QuizScreen() {
             exit={{ opacity: 0, scale: 0.95 }}
           >
             {/* Score Card */}
-            <div className="bg-gradient-to-br from-[#5F33E1] to-[#8B5CF6] rounded-3xl p-8 mb-6 text-center shadow-2xl shadow-[#5F33E1]/30">
+            <div className="bg-gradient-to-br from-[#6B5FFF] to-[#A855F7] rounded-3xl p-8 mb-6 text-center shadow-2xl shadow-[#6B5FFF]/30">
               <motion.div
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
@@ -350,7 +350,7 @@ export default function QuizScreen() {
                 <RotateCcw className="w-5 h-5" />
                 Retry
               </button>
-              <button className="bg-[#5F33E1] hover:bg-[#7047E8] text-white py-4 rounded-2xl font-semibold transition-all shadow-lg shadow-[#5F33E1]/30">
+              <button className="bg-[#6B5FFF] hover:bg-[#8B75FF] text-white py-4 rounded-2xl font-semibold transition-all shadow-lg shadow-[#6B5FFF]/30">
                 Continue Learning
               </button>
             </div>
